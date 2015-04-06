@@ -74,7 +74,9 @@
 	<FUNCTION id="search">
 		<CMD cmd="url = 'http://www.culture.go.kr/openapi/rest/publicperformancedisplays/area?ServiceKey=' + userVariable.serviceKey + '&amp;cPage=1&amp;rows=999'"/>
 		<CMD cmd="url = url + '&amp;sido=' + string.encode(sido.text, 'percent')" />
+		<CMD cmd="device.log(url)"/>
 		<CMD cmd="xml = file.read(url)" />
+		<CMD cmd="device.log(xml)"/>
 		<CMD condition="function.checkResultCode(xml)" cmd="showList.dataSource = xml" />
 	</FUNCTION>
 
