@@ -76,7 +76,7 @@
 		<CMD cmd="url = url + '&amp;sido=' + string.encode(sido.text, 'percent')" />
 		<CMD cmd="device.log(url)"/>
 		<CMD cmd="xml = file.read(url)" />
-		<CMD cmd="device.log(xml)"/>
+		<CMD cmd="device.log(xml)"/> 
 		<CMD condition="function.checkResultCode(xml)" cmd="showList.dataSource = xml" />
 	</FUNCTION>
 
