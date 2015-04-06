@@ -98,7 +98,9 @@
 		<CMD cmd="userVariable.seq = xpath.evaluate('seq/text()')" />
 		<CMD cmd="url = 'http://www.culture.go.kr/openapi/rest/publicperformancedisplays/d/?ServiceKey=' + userVariable.serviceKey"/>
 		<CMD cmd="url = url + '&amp;seq=' + userVariable.seq" />
+		<CMD cmd="device.log(url)"/>
 		<CMD cmd="xml = file.read(url)" />
+		<CMD cmd="device.log(xml)"/>
 		<!-- 개요 -->
 		<CMD cmd="detailTitle.text = xpath.evaluateEx(xml, '//title/text()')" />
 		<CMD cmd="detailImg.defaultImg = string.encode(xpath.evaluateEx(xml, '//imgUrl/text()'), 'url')" />
